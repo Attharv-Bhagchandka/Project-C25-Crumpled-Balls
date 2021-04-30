@@ -1,7 +1,5 @@
-class ground
-{
-	constructor(x,y,w,h)
-	{
+class ground{
+	constructor(x,y,w,h){
 		var options={
 			isStatic:true			
 			}
@@ -13,8 +11,7 @@ class ground
  		World.add(world, this.body);
 
 	}
-	display()
-	{
+	display(){
 			
 			var groundPos=this.body.position;		
 
