@@ -8,15 +8,16 @@ class Paper{
 		this.x=x;
 		this.y=y;
 		this.r=r;
-        super(this.x, this.y, (this.r-20)/2, options);
+        this.body = Bodies.circle(this.x, this.y, (this.r-20)/2, options);
         this.image = loadImage("paper.png");
 		World.add(world, this.body);
 	}
-	display(){	
+	display(){
+		var Pos	= this.body.position;
         push()
+		translate(Pos.x, Pos.y)
         imageMode(CENTER);
-        image(this.image, x, y, this.r);
-		super.display();
+        image(this.image, 0, 0, this.r);
         pop()
 	}
 }
